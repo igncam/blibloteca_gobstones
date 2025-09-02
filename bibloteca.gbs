@@ -40,19 +40,6 @@ procedure Mover_VecesAl_(cantidadAMover,direcciónAMover) {
 }
 
 
-procedure Sacar_DeColor_(cantidadASacar,colorASacar) {
-    /*
-        PROPÓSITO:  Saca *cantidadASacar* bolitas de color *colorASacar* en la celda actual
-        PARÁMETROS:
-            * cantidadASacar: Numero - Cantidad de bolitas a sacar.
-            * colorASacar: Color - Color de bolitas a sacar.
-        PRECONDICIONES: Ninguna
-            
-    */
-    repeat(cantidadASacar){
-        Sacar(colorASacar)
-    }
-}
 
 procedure Sacar_DeColor_(cantidadASacar,colorASacar) {
     /*
