@@ -47,7 +47,7 @@ procedure Sacar_DeColor_(cantidadASacar,colorASacar) {
         PARÁMETROS:
             * cantidadASacar: Numero - Cantidad de bolitas a sacar.
             * colorASacar: Color - Color de bolitas a sacar.
-        PRECONDICIONES: Ninguna
+        PRECONDICIONES: Debe haber al menos 1 bolita de *colorASacar*
             
     */
     repeat(cantidadASacar){
