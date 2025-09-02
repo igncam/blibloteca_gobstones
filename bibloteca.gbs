@@ -1,0 +1,91 @@
+
+
+procedure PonerUnaDeCada() {
+    /*
+    PROPÓSITO:  Pone una bolita de cada color en la celda actual
+    PRECONDICIONES: niguna
+    */
+
+    Poner(Verde)
+    Poner(Azul)
+    Poner(Negro)
+    Poner(Rojo)
+}
+
+procedure Poner_DeColor_(cantidadAPoner, colorAPoner){
+   /*
+    PROPÓSITO:  Pone *cantidadAPóner* bolitas de color *colorAPoner* en la celda actual
+    PARÁMETROS:
+            * cantidadAPoner: Numeros - Cantidad de bolitas a poner.
+            * colorAPoner: Colores - Color de bolitas a poner.
+    PRECONDICIONES: niguna
+    */
+    repeat (cantidadAPoner) {
+        Poner(colorAPoner)
+    }
+}
+
+procedure Mover_VecesAl_(cantidadAMover,direcciónAMover) {
+    /*
+        PROPÓSITO:  Mueve *cantidadAMover* hacia la direccion *direccioAMover*
+        PARÁMETROS:
+            * cantidadAMover: Numeros - Cantidad de movimientos.
+            * direcciónAMover: Direcciones - Direccion a mover.
+        PRECONDICIONES: Debe haber al menos *cantidadAMover* celdas lidantes al *direcciónAMover*
+            
+    */
+    repeat(cantidadAMover){
+        Mover(direcciónAMover)
+    }
+}
+
+
+procedure Sacar_DeColor_(cantidadASacar,colorASacar) {
+    /*
+        PROPÓSITO:  Saca *cantidadASacar* bolitas de color *colorASacar* en la celda actual
+        PARÁMETROS:
+            * cantidadASacar: Numero - Cantidad de bolitas a sacar.
+            * colorASacar: Color - Color de bolitas a sacar.
+        PRECONDICIONES: Ninguna
+            
+    */
+    repeat(cantidadASacar){
+        Sacar(colorASacar)
+    }
+}
+
+procedure Sacar_DeColor_(cantidadASacar,colorASacar) {
+    /*
+        PROPÓSITO:  Saca *cantidadASacar* bolitas de color *colorASacar* en la celda actual
+        PARÁMETROS:
+            * cantidadASacar: Numero - Cantidad de bolitas a sacar.
+            * colorASacar: Color - Color de bolitas a sacar.
+        PRECONDICIONES: Ninguna
+            
+    */
+    repeat(cantidadASacar){
+        Sacar(colorASacar)
+    }
+}    
+
+procedure SacarTodasLasDeColor_(colorASacar) {
+    /*
+        PROPÓSITO:  Saca todas las bolitas de *colorASacar* en la celda actual
+        PARÁMETROS:
+            * colorASacar: tipo - descripción.
+        PRECONDICIONES:Ninguna
+    */
+    Sacar_DeColor_(nroBolitas(colorASacar),colorASacar)
+
+}
+
+procedure VaciarCelda(){
+    /*
+        PROPÓSITO:  Saca todas las bolitas de la celda actual.
+        PRECONDICIONES: Ninguno
+    */
+    SacarTodasLasDeColor_(Rojo)
+    SacarTodasLasDeColor_(Negro) 
+    SacarTodasLasDeColor_(Azul) 
+    SacarTodasLasDeColor_(Verde)  
+}
