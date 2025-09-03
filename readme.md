@@ -10,3 +10,4 @@ Este repositorio contiene una colección de procedimientos útiles para trabajar
 - **`Sacar_DeColor_`**: Saca una cantidad específica de bolitas de un color dado en la celda actual.
 - **`SacarTodasLasDeColor_`**: Saca todas las bolitas de un color dado en la celda actual.
 - **`VaciarCelda`**: Vacía la celda actual de todas las bolitas.
+- **`MoverDiagonalAl_Y_`**: Mueve el cabezal hacia la celda en diagonal hacia *primeraDireccion* y *segundaDireccion*.

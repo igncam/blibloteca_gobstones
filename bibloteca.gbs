@@ -76,3 +76,18 @@ procedure VaciarCelda(){
     SacarTodasLasDeColor_(Azul) 
     SacarTodasLasDeColor_(Verde)  
 }
+
+procedure MoverDiagonalAl_Y_(primeraDireccion, segundaDireccion){
+    
+    /*
+    PROPOSITO: Mueve el cabezal hacia la celda en diagonal hacia *primeraDireccion*
+    y *segundaDireccion*.
+    PRECONDICIONES: 
+    *Debe haber al menos una celda hacia *primeraDireccion*
+    *Debe haber al menos una celda hacia *segundaDireccion*
+    **primeraDireccion* y *segundaDireccion* no puede ser opuestas ni iguales.
+    */
+    
+    Mover(primeraDireccion)
+    Mover(segundaDireccion)
+}
