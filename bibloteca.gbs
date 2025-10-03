@@ -91,3 +91,42 @@ procedure MoverDiagonalAl_Y_(primeraDireccion, segundaDireccion){
     Mover(primeraDireccion)
     Mover(segundaDireccion)
 }
+
+procedure Poner_Si_(color,condicion){
+    /*
+        PROPOSITO: Pone una bolita *color* si *condicion* se cumple
+        PARÁMETROS:
+            * color: Color - Color de bolita a poner.
+            * condicion: Bool - Condicion a evaluar para poner bolita
+    */
+    if(condicion) then{
+        Poner(color)
+    }
+}
+
+procedure Sacar_Si_(color,condicion){
+    /*
+        PROPOSITO: Quita una bolita *color* si *condicion* se cumple
+        PARÁMETROS:
+            * color: Color - Color de bolita a quitar.
+            * condicion: Bool - Condicion a evaluar para quitar bolita
+    */
+    if(condicion) then{
+        Sacar(color)
+    }
+}
+
+
+procedure Mover_Si_(direccion,condicion){
+    /*
+        PROPOSITO: Mueve una posicion al *direccion* solo si *condicion* se cumple
+        PARÁMETROS:
+            * direccion: Dir - Direccion a mover.
+            * condicion: Bool - Condicion a evaluar
+        PRECONDICION: 
+            * Debe existir una posicion al *direccion* a mover.
+    */
+    if(condicion) then{
+        Mover(direccion)
+    }
+}
