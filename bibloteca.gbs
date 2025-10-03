@@ -399,3 +399,25 @@ function cantidadDeCeldasConBolitasDeColor_(color){
     return(celdasConBolitasDeColor)
     
 }
+
+
+function nroBolitasTotalDeColor_(color){
+    
+          /*
+        PROPÓSITO: Describe la cantidad de bolitas de color *color* que hay en el tablero
+        PARAMETROS:
+            * color : Color - Indica el color de la bolita a contar.
+        PRECONDICIONES:
+            *
+        TIPO: Numero      
+        */
+    IrAPrimeraCeldaEnUnRecorridoAl_Y_(Este, Norte)
+    cantidadBolitas := 0
+   
+    while(haySiguienteCeldaEnUnRecorridoAl_Y_(Este, Norte)){
+        cantidadBolitas := cantidadBolitas + nroBolitas(color)
+        IrASiguienteCeldaEnUnRecorridoAl_Y_(Este, Norte)
+    }
+    
+    return(cantidadBolitas)
+}
