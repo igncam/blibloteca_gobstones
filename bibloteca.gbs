@@ -421,3 +421,19 @@ function nroBolitasTotalDeColor_(color){
     
     return(cantidadBolitas)
 }
+
+function unoSi_ceroSino(condicion){
+              /*
+        PROPÓSITO: Describe devolviendo 1 si la *condicion* se cumple y 0 si la *condicion* no se cumple
+        PARAMETROS:
+            * condicion : Bool - Codicion a evalular.
+        PRECONDICIONES:
+            *
+        TIPO: Numero      
+        */
+
+        return( choose 
+                    1 when (condicion)
+                    0 otherwise
+                    )
+}
