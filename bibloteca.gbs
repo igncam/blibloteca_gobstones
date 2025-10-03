@@ -337,3 +337,32 @@ function nroFilas(){
     return (distanciaAlBorde_(Norte) + 1)
 }
 
+function unoSiNoHayBolitas_ceroSiHay(){
+           /*
+        PROPÓSITO: Describe si la celda actual esta vacia con 1 y 0 si no lo esta.
+        PRECONDICIONES:
+            *
+        TIPO: Numero      
+        */
+    return ( choose 
+                1 when (esCeldaVacía())
+                0 otherwise
+                )
+}
+
+function nroVacias(){
+        /*
+        PROPÓSITO: Describe la cantidad de celdas vacias en el tablero
+        PRECONDICIONES:
+            *
+        TIPO: Numero      
+        */
+    IrAPrimeraCeldaEnUnRecorridoAl_Y_(Este, Norte)
+    celdasVacias := 0
+    while(haySiguienteCeldaEnUnRecorridoAl_Y_(Este, Norte)){
+        celdasVacias := celdasVacias + unoSiNoHayBolitas_ceroSiHay()
+        IrASiguienteCeldaEnUnRecorridoAl_Y_(Este, Norte)
+    }
+    
+    return(celdasVacias)
+}
