@@ -314,3 +314,26 @@ function coordenadaY(){
     return (distanciaAlBorde_(Sur))
 }
 
+function nroColumnas(){
+         /*
+        PROPÓSITO: Describe la cantidad de Columnas que tiene el tablero.
+        PRECONDICIONES:
+            *
+        TIPO: Numero      
+        */
+    IrAPrimeraCeldaEnUnRecorridoAl_Y_(Este, Norte)
+    return (distanciaAlBorde_(Este) + 1)
+}
+
+function nroFilas(){
+       /*
+        PROPÓSITO: Describe la cantidad de Filas que tiene el tablero.
+        PRECONDICIONES:
+            *
+        TIPO: Numero      
+        */
+    IrAPrimeraCeldaEnUnRecorridoAl_Y_(Este, Norte)
+    
+    return (distanciaAlBorde_(Norte) + 1)
+}
+
