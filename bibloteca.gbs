@@ -170,8 +170,8 @@ procedure IrAPrimeraCeldaEnUnRecorridoAl_Y_(dirPrincipal, dirSecundaria){
             *  **dirPrincipal** y **dirSecundaria** no pueden ser opuestas
     */
     
-            IrAlBorde(dirPrincipal)
-            IrAlBorde(dirSecundaria)
+            IrAlBorde(opuesto(dirPrincipal))
+            IrAlBorde(opuesto(dirSecundaria))
 }
 
 function haySiguienteCeldaEnUnRecorridoAl_Y_(dirPrincipal, dirSecundaria){
@@ -198,7 +198,7 @@ procedure IrASiguienteCeldaEnUnRecorridoAl_Y_(dirPrincipal, dirSecundaria){
             *  **dirPrincipal** y **dirSecundaria** no pueden ser iguales
             *  **dirPrincipal** y **dirSecundaria** no pueden ser opuestas
     */
-        
+
     if(puedeMover(dirPrincipal)){
         Mover(dirPrincipal)
     }else{
@@ -206,4 +206,6 @@ procedure IrASiguienteCeldaEnUnRecorridoAl_Y_(dirPrincipal, dirSecundaria){
         Mover(dirSecundaria)
     }          
 }
+
+
 
