@@ -366,3 +366,36 @@ function nroVacias(){
     
     return(celdasVacias)
 }
+
+function unoSiHayBolitasDeColor_CeroSiNo(color){
+           /*
+        PROPÓSITO: Describe si la celda actual hay bolitas de *color* con 1 y 0 si no lo hay.
+        PARAMETROS:
+            * color : Color - Indica el color de la bolita a consultar.
+        PRECONDICIONES:
+            *
+        TIPO: Numero      
+        */
+    return ( choose 
+                1 when (hayBolitas(color))
+                0 otherwise
+                )
+}
+
+function cantidadDeCeldasConBolitasDeColor_(color){
+            /*
+        PROPÓSITO: Describe la cantidad de celdas con bolitas de color *color*
+        PRECONDICIONES:
+            *
+        TIPO: Numero      
+        */
+    IrAPrimeraCeldaEnUnRecorridoAl_Y_(Este, Norte)
+    celdasConBolitasDeColor := 0
+    while(haySiguienteCeldaEnUnRecorridoAl_Y_(Este, Norte)){
+        celdasConBolitasDeColor := celdasConBolitasDeColor + unoSiHayBolitasDeColor_CeroSiNo(color)
+        IrASiguienteCeldaEnUnRecorridoAl_Y_(Este, Norte)
+    }
+    
+    return(celdasConBolitasDeColor)
+    
+}
