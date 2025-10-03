@@ -247,6 +247,7 @@ function mínimoEntre_Y_(numeroUno,numeroDos){
             * numeroUno: Numero - Primer numero a evaluar.
             * numeroDos: Numero - Segundo numero a evaluar.
         PRECONDICIONES:
+            * **numeroUno** y **numeroUno** tiene que ser numeros.
             * **numeroUno** y **numeroUno** no puden ser iguales.
         TIPO: Numero      
         */
@@ -256,3 +257,60 @@ function mínimoEntre_Y_(numeroUno,numeroDos){
                 numeroDos otherwise
                 )
 }
+
+function máximoEntre_Y_(numeroUno,numeroDos){
+       /*
+        PROPÓSITO: Describe cual es mayor entre *numeroUno* *numeroDos*. 
+        PARÁMETROS:
+            * numeroUno: Numero - Primer numero a evaluar.
+            * numeroDos: Numero - Segundo numero a evaluar.
+        PRECONDICIONES:
+            * **numeroUno** y **numeroUno** tiene que ser numeros.
+            * **numeroUno** y **numeroUno** no puden ser iguales.
+        TIPO: Numero      
+        */
+        
+        return(choose 
+                numeroUno when (numeroUno>numeroDos)
+                numeroDos otherwise
+                )
+}
+
+
+function distanciaAlBorde_(direccionBorde){
+       /*
+        PROPÓSITO: Describe cual es la cantidad de bolidar del color *colorBolitas* en la fila actual
+        PARÁMETROS:
+            * direccionBorde: Direccion - Direccion hacia el borde.
+        PRECONDICIONES:
+            *
+        Observación: si la celda actual se encuentra en el borde, la distancia es 0.
+        TIPO: Numero      
+        */
+        distancia := 0
+        while (puedeMover(direccionBorde)) {
+            distancia := distancia + 1
+            Mover(direccionBorde)
+        }
+        return(distancia)     
+}
+function coordenadaX(){
+           /*
+        PROPÓSITO: Describe la posicion en el eje X del cabezal en el tablero
+        PRECONDICIONES:
+            *
+        TIPO: Numero      
+        */
+    return (distanciaAlBorde_(Oeste))
+}
+
+function coordenadaY(){
+               /*
+        PROPÓSITO: Describe la posicion en el eje Y del cabezal en el tablero
+        PRECONDICIONES:
+            *
+        TIPO: Numero      
+        */
+    return (distanciaAlBorde_(Sur))
+}
+
