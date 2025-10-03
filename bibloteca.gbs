@@ -226,8 +226,6 @@ function hayBolitas_EnCeldaAl_(color,direccion){
     return(hayBolitas(color))
 }
 
-
-
 function hayBolitas_Al_(color,direccion){
     
     /*
@@ -240,4 +238,21 @@ function hayBolitas_Al_(color,direccion){
         TIPO: Booleano      
     */
         return(puedeMover(direccion) && hayBolitas_EnCeldaAl_(color,direccion))
+}
+
+function mínimoEntre_Y_(numeroUno,numeroDos){
+       /*
+        PROPÓSITO: Describe cual es menor entre *numeroUno* *numeroDos*. 
+        PARÁMETROS:
+            * numeroUno: Numero - Primer numero a evaluar.
+            * numeroDos: Numero - Segundo numero a evaluar.
+        PRECONDICIONES:
+            * **numeroUno** y **numeroUno** no puden ser iguales.
+        TIPO: Numero      
+        */
+        
+        return(choose 
+                numeroUno when (numeroUno<numeroDos)
+                numeroDos otherwise
+                )
 }
