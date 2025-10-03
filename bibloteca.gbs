@@ -209,3 +209,35 @@ procedure IrASiguienteCeldaEnUnRecorridoAl_Y_(dirPrincipal, dirSecundaria){
 
 
 
+function hayBolitas_EnCeldaAl_(color,direccion){
+    
+    /*
+        PROPÓSITO: Indica si existen bolitas de color *color* en la direccion *direccion* lindante. 
+        PARÁMETROS:
+            * color: Color - Color a consultar.
+            * direccion: Dirreccion - Direccion a consultar.
+        PRECONDICIONES:
+            * Debe existir una celda lindante hacia **direccion**
+        TIPO: Booleano
+              
+    */
+    
+    Mover(direccion)
+    return(hayBolitas(color))
+}
+
+
+
+function hayBolitas_Al_(color,direccion){
+    
+    /*
+        PROPÓSITO: Indica si existen bolitas de color *color* en la direccion *direccion* lindante. 
+        PARÁMETROS:
+            * color: Color - Color a consultar.
+            * direccion: Dirreccion - Direccion a consultar.
+        PRECONDICIONES:
+            * Ninguna
+        TIPO: Booleano      
+    */
+        return(puedeMover(direccion) && hayBolitas_EnCeldaAl_(color,direccion))
+}
