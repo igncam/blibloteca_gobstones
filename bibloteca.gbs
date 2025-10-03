@@ -130,3 +130,31 @@ procedure Mover_Si_(direccion,condicion){
         Mover(direccion)
     }
 }
+
+function esCeldaVacía(){
+    /*
+        PROPÓSITO: Indica si la celda actual esta vacia.
+        TIPO: Bool
+    */
+    
+    return (not hayBolitas(Verde) && not hayBolitas(Azul) && not hayBolitas(Negro) && not hayBolitas(Rojo))
+}
+
+function tieneUnaDeCada(){
+    /*
+        PROPÓSITO: Indica si la celda actual tiene al menos una bolita de cada color.
+        TIPO: Bool
+    */
+    
+    return (hayBolitas(Verde) &&  hayBolitas(Azul) &&  hayBolitas(Negro) &&  hayBolitas(Rojo))
+}
+
+
+function esCeldaConBolitas(){
+    /*
+        PROPÓSITO: Indica si la celda actual tiene al menos una bolita sin importar el color.
+        TIPO: Bool
+    */
+        
+    return (hayBolitas(Verde) ||  hayBolitas(Azul) ||  hayBolitas(Negro) ||  hayBolitas(Rojo))
+}
