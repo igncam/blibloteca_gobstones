@@ -121,7 +121,7 @@ procedure Mover_Si_(direccion,condicion){
     /*
         PROPOSITO: Mueve una posicion al *direccion* solo si *condicion* se cumple
         PARÁMETROS:
-            * direccion: Dir - Direccion a mover.
+            * direccion: Dirreccion - Direccion a mover.
             * condicion: Bool - Condicion a evaluar
         PRECONDICION: 
             * Debe existir una posicion al *direccion* a mover.
@@ -155,6 +155,6 @@ function esCeldaConBolitas(){
         PROPÓSITO: Indica si la celda actual tiene al menos una bolita sin importar el color.
         TIPO: Bool
     */
-        
+
     return (hayBolitas(Verde) ||  hayBolitas(Azul) ||  hayBolitas(Negro) ||  hayBolitas(Rojo))
 }
