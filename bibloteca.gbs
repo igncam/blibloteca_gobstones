@@ -158,3 +158,52 @@ function esCeldaConBolitas(){
 
     return (hayBolitas(Verde) ||  hayBolitas(Azul) ||  hayBolitas(Negro) ||  hayBolitas(Rojo))
 }
+
+procedure IrAPrimeraCeldaEnUnRecorridoAl_Y_(dirPrincipal, dirSecundaria){
+    /*
+        PROPÓSITO: Mueve el cabezal a la primera celda de un recorido en direccion *dirPrincipal* y *dirSecundaria* 
+        PARÁMETROS:
+            * dirPrincipal: Dirreccion - Primera direccion a mover.
+            * dirSecundaria: Dirreccion - Segunda direccion a mover.
+        PRECONDICIONES:
+            *  **dirPrincipal** y **dirSecundaria** no pueden ser iguales
+            *  **dirPrincipal** y **dirSecundaria** no pueden ser opuestas
+    */
+    
+            IrAlBorde(dirPrincipal)
+            IrAlBorde(dirSecundaria)
+}
+
+function haySiguienteCeldaEnUnRecorridoAl_Y_(dirPrincipal, dirSecundaria){
+    /*
+        PROPÓSITO: Indica si el cabezal se puede mover hacia el *dirPrincipal* o *dirSecundaria* 
+        PARÁMETROS:
+            * dirPrincipal: Dirreccion - Primera direccion a evaluar.
+            * dirSecundaria: Dirreccion - Segunda direccion a evaluar.
+        PRECONDICIONES:
+            *  **dirPrincipal** y **dirSecundaria** no pueden ser iguales
+            *  **dirPrincipal** y **dirSecundaria** no pueden ser opuestas
+    */
+
+    return(puedeMover(dirPrincipal) ||puedeMover(dirSecundaria))
+}
+
+procedure IrASiguienteCeldaEnUnRecorridoAl_Y_(dirPrincipal, dirSecundaria){
+    /*
+        PROPÓSITO: Mueve el cabezal en la siguiente celda de un recorido en direccion *dirPrincipal* y *dirSecundaria* 
+        PARÁMETROS:
+            * dirPrincipal: Dirreccion - Primera direccion a mover.
+            * dirSecundaria: Dirreccion - Segunda direccion a mover.
+        PRECONDICIONES:
+            *  **dirPrincipal** y **dirSecundaria** no pueden ser iguales
+            *  **dirPrincipal** y **dirSecundaria** no pueden ser opuestas
+    */
+        
+    if(puedeMover(dirPrincipal)){
+        Mover(dirPrincipal)
+    }else{
+        IrAlBorde(opuesto(dirPrincipal))
+        Mover(dirSecundaria)
+    }          
+}
+
